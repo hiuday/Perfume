@@ -102,6 +102,9 @@
     background-color: var(--black-color);
 }
 /* banner cho anhr */
+.banner_product{
+    margin: 100px 30px 100px 30px;
+}
 .show_more_product{
     width: 450px;
     height: 500px;
@@ -110,8 +113,24 @@
     cursor: pointer;
     overflow: hidden;
     margin-bottom: 20px;
+    color: var(--white-color);
 }
 .banner_flex{
     display: flex;
     justify-content: space-around;
+}
+.text_product{
+    margin: 300px 0 0 20px;
+}
+.title_product{
+    margin: 0 0 0 20px;
+    padding: 20px 0 20px 0;
+}
+.submit_product{
+    margin: 0 0 0 20px;
+    padding: 10px 30px;
+    border: 1px solid var(--white-color);
+    text-transform: uppercase;
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
