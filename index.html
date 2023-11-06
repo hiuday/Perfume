@@ -10,6 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./vendors/themify-icons/themify-icons.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -18,116 +19,255 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/database.css" />
-    <link rel="stylesheet" href="./assets/header.css" />
+    <link rel="stylesheet" href="./components/header.css" />
+    <link rel="stylesheet" href="./assets/backgroundimg.css" />
     <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./components/footer.css" />
   </head>
   <body>
-    <header>
-      <div class="promo-bar">
-        <div class="content">
-          <p class="nav1">
-            <a href="#">tặng phí ship 35k cho tất cả đơn hàng</a>
-          </p>
-          <p class="nav2" hidden>
-            <a href="#">quận ngũ hành sơn thành phố đà nẵng</a>
-          </p>
-          <p class="nav3" hidden><a href="#">danh mục mã số nước hoa</a></p>
-          <p class="nav4" hidden><a href="#">danh mục mã số nước hoa</a></p>
+    <header class="header_top">
+      <div id="topbar">
+        <div class="topbar_content">
+          <p><a href="#">Tặng phí ship 35k cho tất cả đơn hàng</a></p>
+          <p><a href="#">Danh mục mã số nước hoa</a></p>
+          <p><a href="#">Danh mục mã số nước hoa</a></p>
+          <p><a href="#">Địa chỉ:Thành phố Đà Nẵng</a></p>
         </div>
       </div>
     </header>
-    <header class="main-header">
-      <div class="header-logo">
-        <a href="#"><img src="./assets/img/logo.webp" alt="" /></a>
-      </div>
-      <div class="header-nav">
-        <ul>
-          <li>
-            <a href="#">ưa đãi<i class="fa-solid fa-chevron-down"></i></a>
-          </li>
-          <li>
-            <a href="#">nước hoa<i class="fa-solid fa-chevron-down"></i></a>
-          </li>
-          <li>
-            <a href="#"
-              >sản phẩm khác<i class="fa-solid fa-chevron-down"></i
-            ></a>
-          </li>
-          <li>
-            <a href="#">giới thiệu<i class="fa-solid fa-chevron-down"></i></a>
-          </li>
-          <li><a href="#">blog</a></li>
-          <li><a href="#">liên hệ</a></li>
-        </ul>
-      </div>
-      <div class="header-login">
-        <ul>
-          <li><i class="fa-regular fa-user"></i></li>
-          <li><i class="fa-solid fa-magnifying-glass"></i></li>
-          <li><i class="fa-solid fa-cart-shopping"></i></li>
-        </ul>
+    <header class="main_header">
+      <div class="header_transparent">
+        <div class="header_logo">
+          <img src="./assets/img/logo.webp" alt="" />
+        </div>
+        <div class="header_content">
+          <ul>
+            <li>
+              <a href="#">ưu đãi <i class="ti-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">nước hoa <i class="ti-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">sản phẩm khác <i class="ti-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">giới thiệu <i class="ti-angle-down"></i></a>
+            </li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="header_user">
+          <div class="icon">
+            <a href="#"><i class="ti-user"></i></a>
+          </div>
+          <div class="icon">
+            <a href="#"><i class="ti-search"></i></a>
+          </div>
+          <div class="icon">
+            <a href="#"><i class="ti-shopping-cart"></i></a>
+          </div>
+        </div>
       </div>
     </header>
-    <header class="footer-header">
+    <section class="img_banner">
       <div
         class="position-absolute slider-circle top-100 start-50 translate-middle"
       >
-        <a href="#" id="arrow"><i class="fa-solid fa-chevron-down"></i></a>
+        <a href="#" id="arrow"><i class="ti-angle-down"></i></a>
       </div>
-    </header>
+    </section>
+    <!-- show sản phẩm nước hoa -->
     <main>
-      <section class="main-1">
-        <div class="title">
-          <h1>các loại nước hoa nổi tiếng</h1>
-          <nav class="tab-title">
-            <ul>
-              <li><a href="">Le Labo</a></li>
-              <li><a href="">Giorgio Armani Acqua Di Gio</a></li>
-              <li><a href="">VERSACE </a></li>
-              <li><a href="">Chanel</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="img-banner">
-          <figure>
-            <img src="./assets/img/another 13.jpg" alt="" />
-            <div class="banner-tooltips">
-              <p>xem chi tiết</p>
+      <section class="home_review">
+        <div class="content_home">
+          <div class="heading_home">
+            <h1 class="subheading">các loại nước hoa nổi tiếng</h1>
+            <div class="tab_title">
+              <ul class="tab_nav">
+                <li><a href="#">Le Labo</a></li>
+                <li><a href="#">Dior Sauvage</a></li>
+                <li><a href="#">Diamond Femme </a></li>
+                <li><a href="#">YSL</a></li>
+              </ul>
             </div>
-            <figcaption>Nước Hoa Another 13</figcaption>
-            <span>Giá cả</span>
-          </figure>
-          <figure>
-            <img src="./assets/img/Santal 33.jpg" alt="" />
-            <div class="banner-tooltips">
-              <p>xem chi tiết</p>
-            </div>
-            <figcaption>Nước Hoa Santal 33</figcaption>
-
-            <span>Giá cả</span>
-          </figure>
-          <figure>
-            <img src="./assets/img/the noir 29.jpg" alt="" />
-            <div class="banner-tooltips">
-              <p>xem chi tiết</p>
-            </div>
-            <figcaption>The Noir 29</figcaption>
-            <span>Giá cả</span>
-          </figure>
-          <figure>
-            <img src="./assets/img/Vetiver 46.jpg" alt="" />
-            <div class="banner-tooltips">
-              <p>xem chi tiết</p>
-            </div>
-            <figcaption>Vetiver 46</figcaption>
-            <span>Giá cả</span>
-          </figure>
+          </div>
+          <div id="product">
+            <figure>
+              <div class="img_product img_item_1">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="img_product img_item_2">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="img_product img_item_3">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="img_product img_item_4">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
-      <section>
-        
+      <!-- kết thúc phần giới thiệu nước hoa -->
+      <!-- phần ưu đãi -->
+      <section class="home_review">
+        <div class="content_home">
+          <div class="heading_home">
+            <h1 class="subheading">ưu đãi</h1>
+            <div class="tab_title">
+              <ul class="tab_nav">
+                <li><a href="#">Nến Thơm</a></li>
+                <li><a href="#">Sữa tắm nước hoa</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="product">
+            <figure>
+              <div class="img_product img_item_5">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="img_product img_item_6">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="img_product img_item_7">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <div class="img_product img_item_8">
+                <p>xem chi tiết</p>
+              </div>
+              <figcaption>
+                Nước hoa
+                <p>Giá cả</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="show_more">
+            <button><a href="#">xem thêm</a></button>
+          </div>
+        </div>
+      </section>
+      <section class="banner_product">
+        <div class="banner_flex">
+          <a href="#" class="show_more_product">
+            <div class="show_more_product img_item_1">
+              <p>Bộ Sưu Tập Mới</p>
+              <h2>2023</h2>
+              <button>xem thêm</button>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_item_8 show_more_product">
+              <p>Bộ Sưu Tập Mới</p>
+              <h2>2023</h2>
+              <button>xem thêm</button>
+            </div>
+          </a>
+          <a href="#">
+            <div class="img_item_8 show_more_product">
+              <p>Bộ Sưu Tập Mới</p>
+              <h2>2023</h2>
+              <button>xem thêm</button>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
+    <!-- kết thúc phần main -->
+    <!-- phần footer -->
+    <footer>
+      <section class="footer_content">
+        <div class="footer_review">
+          <h3>giới thiệu</h3>
+          <div>
+            <p>CÔNG TY MTV PERFUME ĐÀ NẴNG</p>
+            <p>MST: chưa có</p>
+            <p>NGÀY CẤP:30/7/2032</p>
+            <p>NƠI CẤP: Sở kế hoạch và đầu tư Thành Phố Đà Nẵng</p>
+            <div>
+              <a href="#"><img src="./assets/img/logo_footer.webp" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_policy">
+          <h3>chính sách</h3>
+          <div>
+            <ul class="footer_nav">
+              <li>
+                <a href=""><span>-</span>Về chúng tôi</a>
+              </li>
+              <li>
+                <a href=""><span>-</span>Hệ thống cửa hàng</a>
+              </li>
+              <li>
+                <a href=""><span>-</span>Chính sách thành viên</a>
+              </li>
+              <li>
+                <a href=""><span>-</span>Dịch vụ độc quyền</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_contact">
+          <h3>thông tin liên hệ</h3>
+          <ul class="footer_nav">
+            <li><span>-</span>SĐT:096449xxxx</li>
+            <li><span>-</span>Email:hieulmht276@gmail.com</li>
+            <li><span>-</span>Địa Chỉ:Nhà ở Đà Nẵng</li>
+            <li>
+              <span>-</span>Facebook:
+              <a
+                href="https://www.facebook.com/hieu.ngao.270620/"
+                target="_blank"
+                >https://www.facebook.com/hieu.ngao.270620/</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

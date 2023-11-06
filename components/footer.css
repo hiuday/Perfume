@@ -1,0 +1,51 @@
+:root{
+        --black-background-color: #000000;
+        --white-background-color:#FFFFFF;
+        --white-color:#FFFFFF;
+        --black-color:#000000;
+    }
+
+footer{
+    background-color: var(--black-background-color);
+    color: var(--white-color);
+}
+.footer_content{
+    display: grid;
+    grid-template-columns: 30% 30% 58% ;
+    justify-items: center;
+    padding: 50px 200px;
+    
+}
+.footer_content h3{
+    text-transform: uppercase;
+}
+.footer_review{
+    line-height: 40px;
+    
+}
+.footer_review> p{
+    font-size: 14px;
+}
+.footer_review img{
+    width: 150px;
+    height: 60px;
+}
+.footer_policy .footer_nav a{
+color: var(--white-color);
+line-height: 40px;
+letter-spacing: 2px;
+font-size: 14px;
+}
+.footer_contact{
+    margin-left: 20px;
+}
+
+.footer_contact .footer_nav  li{
+    color: white;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+.footer_nav a{
+    color: var(--white-color);
+}
