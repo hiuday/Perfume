@@ -1,0 +1,132 @@
+main{
+    margin: 150px 0 0 0;
+}
+/* form khách hàng */
+.flex_form{
+    display: flex;
+    margin: 100px 80px;
+    justify-content: space-around;
+    
+}
+/* form infor khách hàng */
+#form_infor{
+    padding: 0 150px 0 0;
+}
+
+/* điều hướng navgation */
+.navgation ul {
+display: flex;
+justify-content: space-between;
+
+
+}
+.navgation a{
+    color: black;
+}   
+/* kết thúc điề hướng */
+ 
+/* kết thúc form */
+/* ảnh product */
+.img_product img{
+width: 150px;
+height: 150px;
+border-radius: 10px;
+}
+/* trang form */
+form{
+    margin: 30px 0;
+
+}
+form h5{
+    padding: 5px 5px 10px 0;
+}
+/* các ô input */
+#input_name{
+    margin: 20px 0;
+}
+#input_tel{
+    margin: 20px 0;
+}
+#input_name input {
+    width: 120%;
+    padding: 10px;
+    border-radius: 5px;
+}
+#input_tel input{
+    width: 120%;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* xong 2 button sẽ được đổ dữ liệu của user */
+/* bắt đầu làm 2 bảng giao hàng */
+.form_active{
+    width: 120%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #FAFAFA;
+    margin: 20px 0;
+}
+.form_head{
+    padding: 10px;
+    border-bottom: 1px solid black;
+    background-color: #3DA9D2;
+    color: white;
+}
+.form_content{
+    padding: 10px;
+}
+.form_content p{
+    text-align: center;
+}
+.form_body input{
+    width: 100%;
+    margin: 0 0 10px 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+.form_address select{
+   width: 32%;
+   padding: 5px;
+   border-radius: 5px;
+}
+/* kết thúc 2 bảng giao hàng */
+.form_submit{
+    margin-left: 180px;
+}
+.form_submit button{
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3DA9D2;
+    color: white;
+}
+/* phần ashie product */
+#form_product{
+   padding-right:300px ;
+}
+
+.title_product{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dotted black;
+    padding: 30px 0;
+}
+.count_product{
+    width: 400px;
+    border-bottom: 1px dotted black;
+    padding: 30px 0;
+    
+}
+.count_product span{
+    margin: 0 110px 0 0;
+}
+.total{
+    padding: 30px 0;
+}
+.total span{
+    margin: 0 110px 0 0;
+}
+
+

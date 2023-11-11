@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../vendors/themify-icons/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Trang admin</title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <ul>
+        <li class="list-img"><img src="../assets/img/user.jpg" alt="" /></li>
+        <li>TÊN ADMIN</li>
+        <li class="list-item active">Dashboard</li>
+        <li class="list-item">Users</li>
+        <li class="list-item">Products</li>
+        <li class="list-item">Orders</li>
+      </ul>
+    </aside>
+    <!-- thanh aside bên cạnh -->
+    <main>
+      <section class="content">
+        <div class="container">
+          <div>
+            <h1>List Of User</h1>
+          </div>
+          <div>
+            <input id="search_input" type="text" />
+            <button id="search_button"><i class="ti-search"></i></button>
+          </div>
+          <table>
+            <thead id="table_title">
+              <tr>
+                <td>#</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Full Name</td>
+                <td>Address</td>
+                <td>Status</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+              <tr>
+                <td>number</td>
+                <td>tên tài khoản</td>
+                <td>email</td>
+                <td>tran viet dy hiu</td>
+                <td>đà nẵng</td>
+                <td>active</td>
+                <td>
+                  <button id="View">view</button
+                  ><button id="Block">block</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- 1 séction của dashboar -->
+      <section class="content">
+        <div class="container">
+          <div>
+            <h1>List Of User</h1>
+          </div>
+          <div>
+            <input id="search_input" type="text" />
+            <button id="search_button"><i class="ti-search"></i></button>
+          </div>
+          <table>
+            <thead id="table_title">
+              <tr>
+                <td>#</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Full Name</td>
+                <td>Address</td>
+                <td>Status</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+              <tr>
+                <td>number</td>
+                <td>tên tài khoản</td>
+                <td>email</td>
+                <td>tran viet dy hiu</td>
+                <td>đà nẵng</td>
+                <td>active</td>
+                <td>
+                  <button id="View">view</button
+                  ><button id="Block">block</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- container thứ 2 -->
+        <div class="container">
+          <div class="container_admin">
+            <h1 class="h1_inline">List Of Admin</h1>
+            <button class="new_admin">Add new Admin</button>
+          </div>
+          <div>
+            <input id="search_input" type="text" />
+            <button id="search_button"><i class="ti-search"></i></button>
+          </div>
+          <table>
+            <thead id="table_title">
+              <tr>
+                <td>#</td>
+                <td>Username</td>
+                <td>Email</td>
+                <td>Full Name</td>
+                <td>Address</td>
+                <td>Status</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+              <tr>
+                <td>number</td>
+                <td>tên tài khoản</td>
+                <td>email</td>
+                <td>tran viet dy hiu</td>
+                <td>đà nẵng</td>
+                <td>active</td>
+                <td>
+                  <button id="View">view</button
+                  ><button id="Block">block</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- 1 section quản lý product -->
+      <section class="content">
+        <div class="container">
+          <div class="container_admin">
+            <h1 class="h1_inline">Product Management</h1>
+            <button class="new_admin">Add new Product</button>
+          </div>
+          <div>
+            <input id="search_input" type="text" />
+            <button id="search_button"><i class="ti-search"></i></button>
+          </div>
+          <table>
+            <thead id="table_title">
+              <tr>
+                <td>#</td>
+                <td>Product_ID</td>
+                <td>Product Name</td>
+                <td>Price</td>
+                <td>In stock</td>
+                <td>Quantaty Sold</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+              <tr>
+                <td>number</td>
+                <td>PR_001</td>
+                <td>sản phẩm 1</td>
+                <td>950.000VND</td>
+                <td>20 pcs</td>
+                <td>100 pcs</td>
+                <td>
+                  <button id="View">view</button
+                  ><button id="Block">block</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- 1 section quản lý product -->
+      <!-- 1 section quản lý order -->
+      <section class="content">
+        <div class="container">
+          <div class="container_admin">
+            <h1 class="h1_inline">Products Management</h1>
+            <button class="new_admin">Add Products</button>
+          </div>
+          <div>
+            <input id="search_input" type="text" />
+            <button id="search_button"><i class="ti-search"></i></button>
+          </div>
+          <table>
+            <thead id="table_title">
+              <tr>
+                <td>#</td>
+                <td>Order ID</td>
+                <td>Date</td>
+                <td>User Order</td>
+                <td>Total Order Value</td>
+                <td>Status</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody id="table_body">
+              <tr>
+                <td>number</td>
+                <td>ORDER_001</td>
+                <td>12/12/2012</td>
+                <td>USER_001</td>
+                <td>GIÁ TIỀN</td>
+                <td>ORDER PLACED</td>
+                <td>
+                  <button id="View">view</button
+                  ><button id="Block">edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <!-- quản lý order -->
+    </main>
+  </body>
+  <script src="java.js"></script>
+</html>

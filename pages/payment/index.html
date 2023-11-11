@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trang thanh toán</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../vendors/themify-icons/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../assets/database.css" />
+    <!--phần nên copy-->
+    <link rel="stylesheet" href="../../components/header.css" />
+    <!-- phần copy-->
+    <link rel="stylesheet" href="../../components/footer.css" />
+    <!-- phần copy-->
+    <link rel="stylesheet" href="./payment.css" />
+  </head>
+  <body>
+    <!-- phần header -->
+    <header class="header_top">
+      <div id="topbar">
+        <div class="topbar_content">
+          <p><a href="#">Tặng phí ship 35k cho tất cả đơn hàng</a></p>
+          <p><a href="#">Danh mục mã số nước hoa</a></p>
+          <p><a href="#">Danh mục mã số nước hoa</a></p>
+          <p><a href="#">Địa chỉ:Thành phố Đà Nẵng</a></p>
+        </div>
+      </div>
+    </header>
+    <header class="main_header">
+      <div class="header_transparent">
+        <div class="header_logo">
+          <img src="../../assets/img/logo.webp" alt="" />
+        </div>
+        <div class="header_content">
+          <ul>
+            <li>
+              <a href="#">ưu đãi <i class="ti-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">nước hoa <i class="ti-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">sản phẩm khác <i class="ti-angle-down"></i></a>
+            </li>
+            <li>
+              <a href="#">giới thiệu <i class="ti-angle-down"></i></a>
+            </li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="header_user">
+          <div class="icon">
+            <a href="#"><i class="ti-user"></i></a>
+          </div>
+          <div class="icon">
+            <a href="#"><i class="ti-search"></i></a>
+          </div>
+          <div class="icon">
+            <a href="#"><i class="ti-shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- kết thúc phần header -->
+    <!-- phần main body -->
+    <main>
+      <section class="flex_form">
+        <div id="form_infor">
+          <div class="title">
+            <h2>Morra Việt Nam</h2>
+          </div>
+          <div class="navgation">
+            <ul>
+              <li><a href="trang cart">Giỏ hàng</a></li>
+              <li><i class="ti-angle-right"></i></li>
+              <li>
+                <a href="trang thông tin giao hàng">Thông tin giao hàng</a>
+              </li>
+              <li><i class="ti-angle-right"></i></li>
+              <li>
+                <a href="trang thông tin thanh toán">Phương thức thanh toán</a>
+              </li>
+            </ul>
+          </div>
+
+          <form action="#">
+            <h5>Thông tin khách hàng</h5>
+            <div id="input_name">
+              <input type="text" placeholder="Họ và tên" />
+            </div>
+            <div id="input_tel">
+              <input type="tel" placeholder="Số điện thoại" />
+            </div>
+
+            <div class="form_active">
+              <div class="form_head">
+                <input type="radio" />
+                <label for="">Giao tận nơi</label>
+              </div>
+              <div class="form_content">
+                <div class="form_body">
+                  <input type="text" placeholder="Địa chỉ" />
+                </div>
+                <div class="form_address">
+                  <select name="" id="city">
+                    <option value="">Chọn tỉnh/thành</option>
+                    <option value="">Hà Nội</option>
+                    <option value="">Đà Nẵng</option>
+                    <option value="">Hồ Chí Minh</option>
+                  </select>
+                  <select name="" id="">
+                    <option value="">Chọn quận/huyện</option>
+                    <option value="">Hà Nội</option>
+                    <option value="">Đà Nẵng</option>
+                    <option value="">Hồ Chí Minh</option>
+                  </select>
+                  <select name="" id="">
+                    <option value="">Chọn Phường/xã</option>
+                    <option value="">Hà Nội</option>
+                    <option value="">Đà Nẵng</option>
+                    <option value="">Hồ Chí Minh</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form_active">
+              <div class="form_head">
+                <input type="radio" />
+                <label for="">Nhận tại cửa hàng</label>
+              </div>
+              <div class="form_content">
+                <p>Hiện tại cửa hàng không có</p>
+              </div>
+            </div>
+
+            <div class="form_submit">
+              <button>Tiếp tục tiến hành thanh toán</button>
+            </div>
+          </form>
+        </div>
+        <aside id="form_product">
+          <div class="payment_product">
+            <div class="title_product">
+              <div class="img_product">
+                <img src="../../assets/img/another13.jpg" alt="" />
+              </div>
+              <div class="name_product">
+                <p>Another13</p>
+                <p>10ml</p>
+              </div>
+              <div class="price_product">
+                <span>Giá tiền</span>
+              </div>
+            </div>
+
+            <div class="count_product">
+              <div class="count">
+                <span>Tạm tính</span>
+                <span>giá tiền</span>
+              </div>
+              <div class="transport">
+                <span>Phí vận chuyển</span>
+                <span>0 Đồng</span>
+              </div>
+            </div>
+            <div class="total">
+              <span>Tổng cộng</span>
+              <span>Giá tiền</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <!-- phần footer -->
+    <footer>
+      <section class="footer_content">
+        <div class="footer_review">
+          <h3>giới thiệu</h3>
+          <div>
+            <p>CÔNG TY MTV PERFUME ĐÀ NẴNG</p>
+            <p>MST: chưa có</p>
+            <p>NGÀY CẤP:30/7/2032</p>
+            <p>NƠI CẤP: Sở kế hoạch và đầu tư Thành Phố Đà Nẵng</p>
+            <div>
+              <a href="#"
+                ><img src="../../assets/img/logo_footer.webp" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer_policy">
+          <h3>chính sách</h3>
+          <div>
+            <ul class="footer_nav">
+              <li>
+                <a href=""><span>-</span>Về chúng tôi</a>
+              </li>
+              <li>
+                <a href=""><span>-</span>Hệ thống cửa hàng</a>
+              </li>
+              <li>
+                <a href=""><span>-</span>Chính sách thành viên</a>
+              </li>
+              <li>
+                <a href=""><span>-</span>Dịch vụ độc quyền</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_contact">
+          <h3>thông tin liên hệ</h3>
+          <ul class="footer_nav">
+            <li><span>-</span>SĐT:096449xxxx</li>
+            <li><span>-</span>Email:hieulmht276@gmail.com</li>
+            <li><span>-</span>Địa Chỉ:Nhà ở Đà Nẵng</li>
+            <li>
+              <span>-</span>Facebook:
+              <a
+                href="https://www.facebook.com/hieu.ngao.270620/"
+                target="_blank"
+                >https://www.facebook.com/hieu.ngao.270620/</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+    <!-- kết thúc footer -->
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"
+  ></script>
+</html>

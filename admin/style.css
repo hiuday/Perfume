@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+ul,ol {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #ddd;
+}
+
+main {
+    margin-left: 300px;
+    padding: 20px 15px;
+}
+.list-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50% ;
+}
+
+.sidebar ul {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar ul .list-item {
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #938c8c;
+}
+
+.sidebar ul .list-item:hover {
+    background-color: #fff;
+}
+
+.list-item.active {
+    background-color: #fff;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+.content{
+    margin: 50px;
+    
+}
+.container{
+    margin:  10px;
+    border: 1px solid black;
+}
+table{
+    margin: 30px 0;
+    border: 1px solid black;
+ width: 100%;
+ border-radius: 10px 10px 0 0;
+}
+#table_title tr td{
+   padding: 10px;
+   background-color: blue;
+   color: white;  
+   font-weight: 700; 
+}
+#table_body tr td{
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    font-weight: 700;
+}
+#View{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: aqua;
+    color: white;
+    font-weight: 400;
+    margin: 0 5px;
+
+}
+#Block{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-weight: 400;
+    margin: 0 5px;
+
+}
+.container{
+    border: 1px solid black;
+    margin: 30px 0;
+    padding: 30px;
+}
+.container_admin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.new_admin{
+    padding: 10px;
+}
+.h1_inline{
+    display: inline;
+    margin: 0 0 30px;
+}
+#search_input{
+border: none;
+background-color: #938c8c;
+color: white;
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    margin-top: 10px;
+}
+#search_button{
+    background-color: blue;
+    color: white;
+    width: 5%;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    font-weight: 700;
+}
+.new_admin{
+    background-color: blue;
+    font-weight: 700;
+    color: white;
+    border: none;
+    
+}
+

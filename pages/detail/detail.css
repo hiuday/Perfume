@@ -1,0 +1,130 @@
+main{
+    margin: 150px 0;
+}
+.section_header{
+    background-color: #FAFAFA;
+    border-bottom: 1px solid rgb(71, 68, 68,0.1);
+}
+.nav_header{
+    padding: 20px;
+    margin-left: 120px;
+    
+}
+.nav_header a{
+    color: black;
+}
+.detail_product{
+    margin: 100px 120px;
+    
+}
+.detail_product img{
+    width: 600px;
+    height: 600px;
+}
+.product{
+    display: flex;
+
+}
+.content_product{
+    margin-left: 50px;
+    width: 40%;
+}
+#title_product{
+    border-bottom: 1px dotted rgb(71, 68, 68,0.3);
+    
+}
+#title_product h1{
+    font-size: 20px;
+color: rgb(150, 143, 143);
+}
+/* phần giá tiền */
+#price_product{
+    padding: 30px 0;
+    border-bottom: 1px dotted rgba(71, 68, 68, 0.3);
+}
+#sale{
+    color: red;
+    background-color: #F2F5FA;
+    padding: 7px;
+}
+#price{
+    color: rgb(86, 80, 80);
+    padding: 0 5px;
+}
+#ofter_sale{
+    color: rgb(86, 80, 80);
+    
+}
+/* phần chọn ml */
+#size_product{
+    padding: 30px 0;
+    border-bottom: 1px dotted rgba(71, 68, 68, 0.3);
+}
+#size_product button{
+    padding: 7px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+/* phần tăng giảm sản phẩm  */
+#up_down_product{
+    padding: 30px 0;
+    
+}
+.down{
+    padding: 4px 10px;
+    font-weight: 700;
+    border: none;
+    position: absolute;
+    margin-left: 2px ;
+    overflow: hidden;
+}
+#up_down_product input{
+width: 100px;
+padding: 3px 10px;
+margin-left: 28px ;
+border: none;
+overflow: hidden;
+background-color: white;
+border: 1px solid rgba(209, 202, 202, 0.3);
+}
+.up{
+    overflow: hidden;
+    position: absolute;
+    top: 101;
+    left: 20;
+    right: 50;
+    padding: 4px 7px;
+    font-weight: 700;
+    border: none;
+}
+/* phần buttton mua hàng */
+.payment{
+    padding: 30px 0;
+}
+#push_cart{
+    padding: 10px 40px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#buy_now{
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border: none;
+    color: white;
+    background-color: red;
+    font-weight: 700;
+}
+/* phần mô tả */
+#review{
+    padding: 30px 0;
+
+}
+#review h1{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 1000;
+}
