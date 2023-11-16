@@ -30,3 +30,7 @@
     color: var(--black-color);
     opacity: 0.3;
 }
+.gender{
+    display: flex;
+    align-items: center;
+}

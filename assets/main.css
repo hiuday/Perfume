@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .content_home{
     text-align: center;
     margin: 50px;
@@ -22,6 +25,7 @@
     letter-spacing: 3px;
     font-weight: bold;
     padding: 10px 0;
+    
    
 }
 /* kết thúc phần h1 mỗi sản phẩm */
@@ -37,10 +41,11 @@
     margin-bottom: 20px;
 }
 /* kho ảnh */
-.img_item_1{
+ .img_item_1{
     background-image: url("./img/another13.jpg");
     
 }
+/*
 .img_item_2{
     background-image: url("./img/Santal33.jpg");
 }
@@ -51,17 +56,41 @@
     background-image: url("./img/Vetiver46.jpg");
 }
 .img_item_5{
-    background-image: url("./img/nenthom.webp");
+    background-image: url("./img/nenthomhoa.webp");
 }
 .img_item_6{
-    background-image: url("./img/nenthom1.webp");
+    background-image: url("./img/nenthomLyli.webp");
 }
 .img_item_7{
     background-image: url("./img/suatam.webp");
 }
+*/
 .img_item_8{
-    background-image: url("./img/suatam2.webp");
+    background-image: url("./img/BST_Lumin.png");
+} 
+
+.content{
+    display: none;
 }
+.content.active{
+    display: block;
+}
+/* phần nước hoa */
+.content1{
+    display: none;
+}
+.content1.active1{
+    display: block;
+}
+/* phần ưu đãi */
+.list_item.active{
+    font-weight: 700;
+}
+/* nước hoa */
+.list_item1.active1{
+    font-weight: 700;
+}
+/* ưu đãi */
 /* .img_item_9{
 
 }
@@ -89,6 +118,12 @@
   justify-content: space-evenly;
 
 }
+#product1{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: space-evenly;
+  
+  }
 /* toooltip cho ảnh */
 /* button cho ảnh */
 .show_more a{
@@ -134,3 +169,80 @@
     background-color: var(--white-color);
     color: var(--black-color);
 }
+/* phần cart của giỏ hàng trang chính */
+/* #cart{
+    position: fixed;
+    height: 100vh;
+    width: 650px;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    overflow-y: scroll;
+    padding: 20px 15px;
+    right: 100%;
+}
+.cart_renderItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product{
+    width: 100%;
+}
+.product img{
+    width: 50px;
+    height: 50px;
+}
+.product ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product a{
+    color: black;
+}
+.down{
+    padding: 0 10px;
+    transform: translateX(30px);
+}
+.up{
+    
+    padding: 0 10px;
+    transform: translateX(-30px);
+}
+.show{
+    width: 100px;
+    background-color: #F0F0F0;
+}
+.icon_trash{
+    padding: 0 10px;
+    color: gray;
+    border: none;
+    background-color: white;
+}
+.sumTotal{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.btn_pay-showcart{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn_pay-showcart button{
+    padding: 10px 30px;
+}
+.btn_pay-showcart .showcart{
+    background-color: black;
+    color: white;
+    border: none;
+}
+.btn_pay-showcart .pay{
+    background-color: red;
+    color: white;
+    border: none;
+}
+.closeCart{
+    cursor: pointer;
+} */

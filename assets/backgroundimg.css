@@ -2,7 +2,8 @@
     background-image: url("./img/background_img.webp");
     background-position: center;
     background-size: cover;
-    height: 110vh;
+    min-height: 110vh;
+
 }
 .position-absolute{
     background-color: var(--white-background-color);

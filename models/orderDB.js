@@ -1,9 +1,5 @@
-const orders = [
-    {
-        id:1,
-        idlsers :1,
-   productPrice:122313,
+const orders = [];
 
-    
-    }
-]
+if (!JSON.parse(localStorage.getItem("orders"))) {
+  localStorage.setItem("orders", JSON.stringify(orders));
+}

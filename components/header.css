@@ -35,13 +35,18 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: var(--white-background-color);
     margin-top: 44px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
+    background-color: transparent;
 } 
+#top_header .header_transparent:hover {
+   background-color: white!important;
+   transition: 0.6s;
+   
+}
 
 .header_content a{
  text-transform: uppercase;
@@ -65,3 +70,79 @@
     color: var(--black-color);
  }
 /* kết thúc phần header icon */
+#cart{
+    position: fixed;
+    height: 100vh;
+    width: 650px;
+    right: 0;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    overflow-y: scroll;
+    padding: 20px 15px;
+    right: -100%;
+}
+.cart_renderItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product{
+    width: 100%;
+}
+.product img{
+    width: 50px;
+    height: 50px;
+}
+.product ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product a{
+    color: black;
+}
+.down{
+    padding: 0 10px;
+    transform: translateX(30px);
+}
+.up{
+    
+    padding: 0 10px;
+    transform: translateX(-30px);
+}
+.show{
+    width: 100px;
+    background-color: #F0F0F0;
+}
+.icon_trash{
+    padding: 0 10px;
+    color: gray;
+    border: none;
+    background-color: white;
+}
+.sumTotal{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.btn_pay-showcart{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn_pay-showcart button{
+    padding: 10px 30px;
+}
+.btn_pay-showcart .showcart{
+    background-color: black;
+    color: white;
+    border: none;
+}
+.btn_pay-showcart .pay{
+    background-color: red;
+    color: white;
+    border: none;
+}
+.closeCart{
+    cursor: pointer;
+}

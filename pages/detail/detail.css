@@ -21,9 +21,9 @@ main{
     width: 600px;
     height: 600px;
 }
-.product{
-    display: flex;
 
+.product_show{
+    display: flex;
 }
 .content_product{
     margin-left: 50px;
@@ -71,7 +71,8 @@ color: rgb(150, 143, 143);
     padding: 30px 0;
     
 }
-.down{
+
+#down{
     padding: 4px 10px;
     font-weight: 700;
     border: none;
@@ -88,7 +89,8 @@ overflow: hidden;
 background-color: white;
 border: 1px solid rgba(209, 202, 202, 0.3);
 }
-.up{
+
+#up{
     overflow: hidden;
     position: absolute;
     top: 101;

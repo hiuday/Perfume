@@ -1,0 +1,61 @@
+main{
+    margin: 150px 0;
+}
+.section_header{
+    background-color: #FAFAFA;
+    border-bottom: 1px solid rgb(71, 68, 68,0.1);
+}
+.nav_header{
+    padding: 20px;
+    margin-left: 120px;
+    
+}
+.nav_header a{
+    color: grey;
+}
+
+/* container */
+/* phần điều hướng sản phẩm */
+.container{
+    margin: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav_product{
+    margin: 0 30px 0 0;
+}
+.nav_product .product li{
+    border-bottom: 1px dotted grey;
+    padding: 20px;
+}
+.nav_product .product a{
+    color: grey;
+}
+/* xong phần điều hướng sản phẩm */
+
+/* phần điều hướng giá cả */
+.nav_price{
+    color: grey;
+}
+.nav_price .price li{
+    padding: 7px 0;
+}
+.nav_price .price li input{
+    margin: 0 5px 0 0
+}
+/* xong phần điều hướNg giá cả */
+
+
+/* phần show sản phẩm */
+.show_product{
+    width: 83%;
+
+}
+.title_product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title_product h3,select,option{
+    color: grey;
+}

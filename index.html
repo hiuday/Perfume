@@ -37,24 +37,24 @@
         </div>
       </div>
     </header>
-    <header class="main_header">
+    <header class="main_header" id="top_header">
       <div class="header_transparent">
         <div class="header_logo">
-          <img src="./assets/img/logo.webp" alt="" />
+          <a href="#"> <img src="./assets/img/logo.webp" alt="" /></a>
         </div>
         <div class="header_content">
           <ul>
-            <li>
+            <!-- <li>
               <a href="#">ưu đãi <i class="ti-angle-down"></i></a>
+            </li> -->
+            <li>
+              <a href="#">nước hoa</a>
             </li>
             <li>
-              <a href="#">nước hoa <i class="ti-angle-down"></i></a>
+              <a href="#">sản phẩm khác</a>
             </li>
             <li>
-              <a href="#">sản phẩm khác <i class="ti-angle-down"></i></a>
-            </li>
-            <li>
-              <a href="#">giới thiệu <i class="ti-angle-down"></i></a>
+              <a href="#">giới thiệu</a>
             </li>
             <li><a href="#">blog</a></li>
             <li><a href="#">liên hệ</a></li>
@@ -62,7 +62,7 @@
         </div>
         <div class="header_user">
           <div class="icon">
-            <a href="#"><i class="ti-user"></i></a>
+            <a href="./pages/history/history.html"><i class="ti-user"></i></a>
           </div>
           <div class="icon">
             <a href="#"><i class="ti-search"></i></a>
@@ -73,6 +73,52 @@
         </div>
       </div>
     </header>
+    <!-- modal cart -->
+    <section id="cart">
+      <h2>GIỎ HÀNG</h2>
+      <div class="cart_box">
+        <div class="cart_renderItem">
+          <span>Bạn có (item) sản phẩm trong giỏ hàng</span>
+          <span class="closeCart">X</span>
+        </div>
+        <div class="product">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="../../assets/img/another13.jpg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="trang chủ">
+                <p>tên sản phẩm</p>
+                <p>10ml</p></a
+              >
+            </li>
+            <li>
+              <button class="down">-</button>
+              <input class="show" type="text" disabled />
+              <button class="up">+</button>
+            </li>
+            <li>Đơn giá</li>
+            <li>
+              <p>Thành tiền:</p>
+              <p>Giá tiền</p>
+              <button class="icon_trash"><i class="ti-trash"></i></button>
+            </li>
+          </ul>
+          <hr />
+          <div class="sumTotal">
+            <span>Tổng tiền</span>
+            <span>Số tiền</span>
+          </div>
+          <div class="btn_pay-showcart">
+            <span><button class="showcart">xem giỏ hàng</button></span>
+            <span><button class="pay">thanh toán</button></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- kết thúc modal cart -->
     <!-- kết thúc phần header -->
     <section class="img_banner">
       <div
@@ -89,15 +135,20 @@
             <h1 class="subheading">các loại nước hoa nổi tiếng</h1>
             <div class="tab_title">
               <ul class="tab_nav">
-                <li><a href="#">Le Labo</a></li>
-                <li><a href="#">Dior Sauvage</a></li>
-                <li><a href="#">Diamond Femme </a></li>
-                <li><a href="#">YSL</a></li>
+                <li data-content="All" class="list_item active">All</li>
+                <li data-content="Lelabo" class="list_item">Le Labo</li>
+                <li data-content="Dior Sauvage" class="list_item">
+                  Dior Sauvage
+                </li>
+                <li data-content="Diamond Femme" class="list_item">
+                  Diamond Femme
+                </li>
+                <li data-content="YSL" class="list_item">YSL</li>
               </ul>
             </div>
           </div>
-          <div id="product">
-            <figure>
+          <div id="product" class="content">
+            <!-- <figure>
               <div class="img_product img_item_1">
                 <p>xem chi tiết</p>
               </div>
@@ -132,7 +183,7 @@
                 Nước hoa
                 <p>Giá cả</p>
               </figcaption>
-            </figure>
+            </figure> -->
           </div>
         </div>
       </section>
@@ -144,13 +195,16 @@
             <h1 class="subheading">ưu đãi</h1>
             <div class="tab_title">
               <ul class="tab_nav">
-                <li><a href="#">Nến Thơm</a></li>
-                <li><a href="#">Sữa tắm nước hoa</a></li>
+                <li data-content="All" class="list_item1 active1">All</li>
+                <li data-content="Nến Thơm" class="list_item1">Nến Thơm</li>
+                <li data-content="Sữa tắm" class="list_item1">
+                  Sữa tắm nước hoa
+                </li>
               </ul>
             </div>
           </div>
-          <div id="product">
-            <figure>
+          <div id="product1" class="content1">
+            <!-- <figure>
               <div class="img_product img_item_5">
                 <p>xem chi tiết</p>
               </div>
@@ -185,7 +239,7 @@
                 Nước hoa
                 <p>Giá cả</p>
               </figcaption>
-            </figure>
+            </figure> -->
           </div>
           <div class="show_more">
             <button><a href="#">xem thêm</a></button>
@@ -202,16 +256,16 @@
             </div>
           </a>
           <a href="#">
-            <div class="img_item_8 show_more_product">
+            <div class="show_more_product img_item_1">
               <p class="text_product">Bộ Sưu Tập Mới</p>
               <h2 class="title_product">2023</h2>
               <button class="submit_product">xem thêm</button>
             </div>
           </a>
           <a href="#">
-            <div class="img_item_8 show_more_product">
-              <p class="text_product">Bộ Sưu Tập Mới</p>
-              <h2 class="title_product">2023</h2>
+            <div class="show_more_product img_item_8">
+              <p class="text_product">Bộ Sữa Tắm</p>
+              <h2 class="title_product">Sữa tắm nước hoa</h2>
               <button class="submit_product">xem thêm</button>
             </div>
           </a>
@@ -273,6 +327,9 @@
     </footer>
     <!-- kết thúc footer -->
   </body>
+  <script src="./models/userDB.js"></script>
+  <script src="./models/orderDB.js"></script>
+  <script src="./models/productDB..js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -283,4 +340,24 @@
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"
   ></script>
+  <script src="./assets/index.js"></script>
+  <script src="./components/scroll.js"></script>
+  <script src="./pages/login/login.js"></script>
+  <script src="./pages/register/register.js"></script>
+  <script src="./assets/active.js"></script>
+  <script src="./models/modalCart.js"></script>
+  <script src="./models/navitionDetail.js"></script>
+  <script src="./pages/detail/detail.js"></script>
+  <script>
+    renderProduct("All");
+  </script>
+  <script>
+    renderProduct1("All");
+  </script>
+  <script>
+    renderDetail();
+  </script>
+  <script>
+    addToCart();
+  </script>
 </html>
