@@ -91,13 +91,14 @@
             <h5>Tài khoản</h5>
             <ul class="list_account">
               <li><a href="#">Thông tin khách hàng</a></li>
-              <li><a href="../../index.html">Đăng xuất</a></li>
+              <li onclick="handleLogout()">Đăng xuất</li>
             </ul>
           </div>
           <div class="infor_foryou">
             <h5>thông tin đăng nhập</h5>
+            
             <ul class="infor">
-              <li>Tên: trần viết duy hiệu</li>
+              <!-- <li>Tên: trần viết duy hiệu</li>
               <li>
                 Email: hieulmht276@gmail.com
                 <button><i class="ti-pencil"></i></button>
@@ -107,7 +108,7 @@
               </li>
               <li>
                 Mật Khẩu: <button><i class="ti-pencil"></i></button>
-              </li>
+              </li> -->
             </ul>
             <div class="cart_box">
               <div class="cart_renderItem">
@@ -211,4 +212,11 @@
     crossorigin="anonymous"
   ></script>
   <script src="../../components/scroll.js"></script>
+  <script>
+    function handleLogout() {
+      localStorage.removeItem("userLogin");
+      window.location.href = "../../index.html";
+    }
+  </script>
+  <script src="./history.js"></script>
 </html>

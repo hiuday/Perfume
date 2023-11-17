@@ -5,6 +5,7 @@ const users = [
     fullName: "Admin",
     email: "admin@gmail.com",
     password: "12345",
+    address:"đà nẵng",
     gender: 1, //1 là nam 2 là nữ
     birthday: "", //ngày sinh nhật của khách
     role: 2, //Vai trò:1 là admin,2 là user
