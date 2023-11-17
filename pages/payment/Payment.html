@@ -42,7 +42,9 @@
     <header class="main_header">
       <div class="header_transparent">
         <div class="header_logo">
-          <a href="../../index.html"> <img src="../../assets/img/logo.webp" alt="" /></a>
+          <a href="../../index.html">
+            <img src="../../assets/img/logo.webp" alt=""
+          /></a>
         </div>
         <div class="header_content">
           <ul>
@@ -97,8 +99,8 @@
             </ul>
           </div>
 
-          <form action="#">
-            <h5>Thông tin khách hàng</h5>
+          <form class="form_user">
+            <!-- <h5>Thông tin khách hàng</h5>
             <div id="input_name">
               <input type="text" placeholder="Họ và tên" />
             </div>
@@ -108,7 +110,7 @@
 
             <div class="form_active">
               <div class="form_head">
-                <input type="radio" />
+                <input name="order" type="radio" />
                 <label for="">Giao tận nơi</label>
               </div>
               <div class="form_content">
@@ -139,7 +141,7 @@
             </div>
             <div class="form_active">
               <div class="form_head">
-                <input type="radio" />
+                <input name="order" type="radio" />
                 <label for="">Nhận tại cửa hàng</label>
               </div>
               <div class="form_content">
@@ -149,11 +151,11 @@
 
             <div class="form_submit">
               <button>Tiếp tục tiến hành thanh toán</button>
-            </div>
+            </div> -->
           </form>
         </div>
         <aside id="form_product">
-          <div class="payment_product">
+          <!-- <div class="payment_product">
             <div class="title_product">
               <div class="img_product">
                 <img src="../../assets/img/another13.jpg" alt="" />
@@ -181,7 +183,7 @@
               <span>Tổng cộng</span>
               <span>Giá tiền</span>
             </div>
-          </div>
+          </div> -->
         </aside>
       </section>
     </main>
@@ -252,4 +254,12 @@
     crossorigin="anonymous"
   ></script>
   <script src="../../components/scroll.js"></script>
+
+  <script src="./payment.js"></script>
+  <script>
+    formProduct();
+  </script>
+  <script>
+    payMent();
+  </script>
 </html>

@@ -103,17 +103,21 @@
     color: black;
 }
 .down{
+    border: none;
     padding: 0 10px;
     transform: translateX(30px);
 }
 .up{
-    
+    border: none;
     padding: 0 10px;
     transform: translateX(-30px);
 }
 .show{
     width: 100px;
-    background-color: #F0F0F0;
+    background-color: white;
+    border: none;
+    color: black;
+
 }
 .icon_trash{
     padding: 0 10px;

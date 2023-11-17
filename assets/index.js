@@ -1,12 +1,10 @@
 // lấy sản phẩm từ local stonge
 
 function renderProduct(data) {
-  console.log(data);
   const productsData = JSON.parse(localStorage.getItem("products"));
   // tạo biến get đến thẻ cha của sản phẩm
 
   const listProducts = document.querySelector("#product");
-  console.log("123", productsData);
   //b3:dùng vòng lặp forEach
   listProducts.innerHTML = "";
 
@@ -28,7 +26,6 @@ function renderProduct(data) {
     });
   } else {
     let dataRender = productsData.filter((item) => item.catagory == data); //tìm theo thuộc tính catagory
-    console.log(data);
     dataRender.forEach(function (item, index) {
       if (index < 4) {
         listProducts.innerHTML += `
@@ -52,12 +49,10 @@ function renderProduct(data) {
 // lấy sản phẩm từ local stonge
 
 function renderProduct1(data) {
-  console.log(data);
   const productsData1 = JSON.parse(localStorage.getItem("products"));
   // tạo biến get đến thẻ cha của sản phẩm
 
   const listProducts1 = document.querySelector("#product1");
-  console.log("123", productsData1);
   //b3:dùng vòng lặp forEach
   listProducts1.innerHTML = "";
 
@@ -79,7 +74,6 @@ function renderProduct1(data) {
     });
   } else {
     let dataRender1 = productsData1.filter((item) => item.catagory == data); //tìm theo thuộc tính catagory
-    console.log(data);
     dataRender1.forEach(function (item, index) {
       if (index < 4) {
         listProducts1.innerHTML += `

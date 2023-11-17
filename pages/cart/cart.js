@@ -2,6 +2,7 @@
 function RenderCart() {
   const UserLogin = JSON.parse(localStorage.getItem("userLogin"));
   let result = "";
+  console.log(UserLogin);
   const renderCart = document.querySelector(".product");
   UserLogin.carts.forEach((element, index) => {
     result += `   
@@ -33,3 +34,27 @@ function RenderCart() {
   });
   renderCart.innerHTML = result;
 }
+// function renderBill() {
+//   const UserLogin = JSON.parse(localStorage.getItem("userLogin"));
+//   const Bill = document.querySelector(".cart_infor");
+//   let result = "";
+//   console.log(UserLogin, "login");
+//   UserLogin.carts.forEach((element, index) => {
+//     result = `<div class="infor_title">
+//     <h5>Thông tin đơn hàng</h5>
+//   </div>
+//   <div class="infor_price">
+//     <span>Tổng tiền:</span>
+//     <span>${element.price * element.quantity}</span>
+//   </div>
+//   <div class="pay">
+//     <button>THANH TOÁN</button>
+//   </div>
+//   <div class="continue">
+//     <a href="#">Tiếp tục mua hàng <i class="ti-arrow-right"></i></a>
+//   </div>
+
+//     `;
+//   });
+//   Bill.innerHTML = result;
+// }
