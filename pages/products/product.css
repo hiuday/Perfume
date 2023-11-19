@@ -59,3 +59,9 @@ main{
 .title_product h3,select,option{
     color: grey;
 }
+.list_item{
+    cursor: pointer;
+}
+.list_item1{
+    cursor: pointer;
+}

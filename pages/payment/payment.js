@@ -4,44 +4,42 @@ function formProduct() {
   const UserLogin = JSON.parse(localStorage.getItem("userLogin")) || [];
   const UserDB = JSON.parse(localStorage.getItem("users")) || [];
   let result = "";
-  console.log(UserLogin);
-  console.log(UserDB);
-
   const renderCart = document.querySelector("#form_product");
   UserDB.forEach((element, index) => {
-   
     if (element.email === UserLogin.email) {
-      result = `   
-    <div class="payment_product">
-    <div class="title_product">
-      <div class="img_product">
-        <img src="../${element.img}" alt="" />
+      element.carts.forEach((item) => {
+        result = `   
+        <div class="payment_product">
+        <div class="title_product">
+          <div class="img_product">
+            <img src="../${item.img}" alt="" />
+          </div>
+          <div class="name_product">
+            <p>${item.productName}</p>
+            <p>Số lượng: ${item.quantity}</p>
+          </div>
+          <div class="price_product">
+            <span>Giá tiền:${item.price}VNĐ</span>
+          </div>
+        </div>
+    
+        <div class="count_product">
+          <div class="count">
+            <span>Tạm tính</span>
+            <span>${item.price}VNĐ</span>
+          </div>
+          <div class="transport">
+            <span>Phí vận chuyển</span>
+            <span>0 Đồng</span>
+          </div>
+        </div>
+        <div class="total">
+          <span>Tổng cộng</span>
+          <span>${item.price * item.quantity}VNĐ</span>
+        </div>
       </div>
-      <div class="name_product">
-        <p>${element.productName}</p>
-        <p>10ml</p>
-      </div>
-      <div class="price_product">
-        <span>Giá tiền</span>
-      </div>
-    </div>
-
-    <div class="count_product">
-      <div class="count">
-        <span>Tạm tính</span>
-        <span>giá tiền</span>
-      </div>
-      <div class="transport">
-        <span>Phí vận chuyển</span>
-        <span>0 Đồng</span>
-      </div>
-    </div>
-    <div class="total">
-      <span>Tổng cộng</span>
-      <span>Giá tiền</span>
-    </div>
-  </div>
-        `;
+            `;
+      });
     }
   });
 
@@ -58,13 +56,13 @@ function payMent() {
          
     <h5>Thông tin khách hàng</h5>
     <div id="input_name">
-      <input value="${element.fullName}" type="text" placeholder="Họ và tên" />
+      <input class="name" value="${element.fullName}" type="text" placeholder="Họ và tên" />
     </div>
     <div id="input_tel">
-      <input value="${element.email}" type="email" placeholder="Email" />
+      <input class="address" value="${element.email}" type="email" placeholder="Email" />
     </div>
     <div id="input_tel">
-      <input type="email" placeholder="Số điện thoại" />
+      <input  class="tel" type="tel" placeholder="Số điện thoại" />
     </div>
 
     <div class="form_active">
@@ -74,7 +72,7 @@ function payMent() {
       </div>
       <div class="form_content">
         <div class="form_body">
-          <input type="text" placeholder="Địa chỉ" />
+          <input  class="address" type="text" placeholder="Địa chỉ" />
         </div>
        
       </div>
@@ -90,11 +88,53 @@ function payMent() {
     </div>
 
     <div class="form_submit">
-      <button>Tiếp tục tiến hành thanh toán</button>
+      <button type="submit">Tiến hành thanh toán</button>
     </div>
 
         `;
     }
   });
 }
+
 //render cả tên thông tin địa chỉ người đăng nhập
+
+// thêm dữ liệu vào từ ô input số điện thoại và địa chỉ
+function addList(event) {
+  event.preventDefault();
+  const User = JSON.parse(localStorage.getItem("userLogin"));
+  const inforUser = JSON.parse(localStorage.getItem("users"));
+  const renderUser = document.querySelector(".form_user");
+  const cartPayment = inforUser.find((element) => {
+    return User.email == element.email;
+  });
+
+  const nameUser = document.querySelector(".name");
+  const myNameUser = nameUser.value;
+  const emailUser = document.querySelector(".address");
+  const myEmailUser = emailUser.value;
+  const tel = document.querySelector(".tel");
+  const address = document.querySelector(".address");
+  const myTel = tel.value;
+  const myAddress = address.value;
+  let newData = {
+    tel: myTel,
+    address: myAddress,
+    fullName: myNameUser,
+    email: myEmailUser,
+    product: cartPayment.carts,
+  };
+
+  const payment = JSON.parse(localStorage.getItem("payment")) || [];
+
+  payment.push(newData);
+  localStorage.setItem("payment", JSON.stringify(payment));
+  // đẩy dữ liệu newdata vào maindata
+  // mainData.push(newData);
+  // localStorage.setItem("users", JSON.stringify(mainData));
+  inforUser.map((element, index) => {
+    if (element.email == User.email) {
+      inforUser[index].carts.length = 0;
+    }
+  });
+  localStorage.setItem("users", JSON.stringify(inforUser));
+}

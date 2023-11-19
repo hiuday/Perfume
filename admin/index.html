@@ -21,28 +21,63 @@
     <title>Trang admin</title>
   </head>
   <body>
+    <header>
+      <section class="nav_header">
+        <div class="nav_menu">
+          <span>
+            <button class=""><i class="ti-menu"></i></button>
+          </span>
+        </div>
+        <div class="nav_userLogin">
+          <span>
+            <button><i class="ti-bell"></i></button>
+          </span>
+          <span
+            ><button><i class="ti-settings"></i></button
+          ></span>
+          <span
+            ><button onclick="navigation()"><i class="ti-user"></i></button
+          ></span>
+        </div>
+      </section>
+    </header>
     <aside class="sidebar">
-      <ul>
+      <ul class="renderAdmin">
         <li class="list-img"><img src="../assets/img/user.jpg" alt="" /></li>
-        <li>TÊN ADMIN</li>
+        <!-- <li>TÊN ADMIN</li> -->
+        <li id="admin-name"></li>
         <li class="list-item active">Dashboard</li>
         <li class="list-item">Users</li>
         <li class="list-item">Products</li>
         <li class="list-item">Orders</li>
+        <li class="list-item">Logout</li>
       </ul>
     </aside>
     <!-- thanh aside bên cạnh -->
     <main>
       <section class="content">
         <div class="container">
-          <div>
-            <h1>List Of User</h1>
+          <div class="title">
+            <h1>Dashboard</h1>
           </div>
-          <div>
-            <input id="search_input" type="text" />
-            <button id="search_button"><i class="ti-search"></i></button>
+          <div class="title_dashboard">
+            <div class="revenue">
+              <h3>Doanh thu</h3>
+              <p>Số tiền đã bán được hàng</p>
+            </div>
+            <div class="product">
+              <h3>Quản lý hàng hoá</h3>
+              <p>Số hàng đã được bán đi</p>
+            </div>
+            <div class="account">
+              <h3>Quản lý tài khoản</h3>
+              <p>Số tài khoản đã đăng ký</p>
+            </div>
           </div>
-          <table>
+          <div class="comming">
+            <h1>comming</h1>
+          </div>
+          <!-- <table>
             <thead id="table_title">
               <tr>
                 <td>#</td>
@@ -59,7 +94,7 @@
                 <td>number</td>
                 <td>tên tài khoản</td>
                 <td>email</td>
-                <td>tran viet dy hiu</td>
+                <td>tran viet dyqưeqwe hiu</td>
                 <td>đà nẵng</td>
                 <td>active</td>
                 <td>
@@ -68,7 +103,7 @@
                 </td>
               </tr>
             </tbody>
-          </table>
+          </table> -->
         </div>
       </section>
       <!-- 1 séction của dashboar -->
@@ -231,5 +266,7 @@
       <!-- quản lý order -->
     </main>
   </body>
-  <script src="java.js"></script>
+  <script src="./java.js"></script>
+  <script src="../admin/login/login.js"></script>
+  <script src="./account.js"></script>
 </html>

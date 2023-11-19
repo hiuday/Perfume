@@ -42,21 +42,20 @@
     <header class="main_header">
       <div class="header_transparent">
         <div class="header_logo">
-          <a href="../../index.html"> <img src="../../assets/img/logo.webp" alt="" /></a>
+          <a href="../../index.html">
+            <img src="../../assets/img/logo.webp" alt=""
+          /></a>
         </div>
         <div class="header_content">
           <ul>
             <li>
-              <a href="#">ưu đãi <i class="ti-angle-down"></i></a>
+              <a href="#">nước hoa </a>
             </li>
             <li>
-              <a href="#">nước hoa <i class="ti-angle-down"></i></a>
+              <a href="#">sản phẩm</a>
             </li>
             <li>
-              <a href="#">sản phẩm khác <i class="ti-angle-down"></i></a>
-            </li>
-            <li>
-              <a href="#">giới thiệu <i class="ti-angle-down"></i></a>
+              <a href="#">giới thiệu </a>
             </li>
             <li><a href="#">blog</a></li>
             <li><a href="#">liên hệ</a></li>
@@ -84,19 +83,23 @@
           <span>/</span>
           <a href="#">Danh mục</a>
           <span>/</span>
-          <a href="#">các loại nước hoa được trỏ vào</a>
+          <!-- <a href="#">các loại nước hoa được trỏ vào</a> -->
         </div>
       </section>
       <section class="section_product">
         <div class="container">
           <div class="nav_product">
             <ul class="product">
-              <li><a href="">Le labo</a></li>
-              <li><a href="">Diamond femme</a></li>
-              <li><a href="">Dior Sauvage</a></li>
-              <li><a href="">YSL</a></li>
-              <li><a href="">Nến thơm</a></li>
-              <li><a href="">Sữa tắm</a></li>
+              <li data-content="Lelabo" class="list_item active">Le labo</li>
+              <li data-content="Diamond Femme" class="list_item">
+                Diamond femme
+              </li>
+              <li data-content="Dior Sauvage" class="list_item">
+                Dior Sauvage
+              </li>
+              <li data-content="YSL" class="list_item">YSL</li>
+              <li data-content="Nến Thơm" class="list_item">Nến thơm</li>
+              <li data-content="Sữa tắm" class="list_item">Sữa tắm</li>
             </ul>
             <div class="nav_price">
               <h5>Giá sản phẩm</h5>
@@ -111,7 +114,7 @@
           </div>
           <div class="show_product">
             <div class="title_product">
-              <h3>Tên nước hoa được onclick vào</h3>
+              <!-- <h3></h3> -->
               <select name="" id="">
                 <option value="">Giá:tăng dần</option>
                 <option value="">Giá:giảm dần</option>
@@ -120,7 +123,7 @@
               </select>
             </div>
             <div id="product">
-              <figure>
+              <!-- <figure>
                 <div class="img_product img_item_1">
                   <p>xem chi tiết</p>
                 </div>
@@ -155,7 +158,7 @@
                   Nước hoa
                   <p>Giá cả</p>
                 </figcaption>
-              </figure>
+              </figure> -->
             </div>
           </div>
         </div>
@@ -228,4 +231,9 @@
     crossorigin="anonymous"
   ></script>
   <script src="../../components/scroll.js"></script>
+  <script src="./product.js"></script>
+  <script src="../../assets/active.js"></script>
+  <script>
+    renderProduct("All");
+  </script>
 </html>

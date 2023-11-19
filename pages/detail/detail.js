@@ -35,7 +35,7 @@ function renderDetail() {
             </div>
             <div class="payment">
               <button onclick="addToCart()" id="push_cart">thêm vào giỏ</button>
-              <button id="buy_now">mua ngay</button>
+              <button onclick="navitionPayment()" id="buy_now">mua ngay</button>
             </div>
             <div id="review">
               <h1>mô tả</h1>
@@ -103,8 +103,9 @@ function addToCart() {
       userCart[indexUserCart].carts[indexProduct].quantity++;
     }
   }
-  userCart.splice(idProductDetail, 1, itemProduct[0]); //dùng splice ddeer gửi vào lại 
-  console.log(userCart,"gửi đúng");
+
+  // userCart.splice(indexUserCart, 1, itemProduct[0]);
+  console.log(userCart, "gửi đúng");
   localStorage.setItem("users", JSON.stringify(userCart));
   RenderCart();
 }
@@ -116,7 +117,6 @@ function RenderCart() {
   const userRenderCart = userCart.filter((element) => {
     return element.id == userLogin.id;
   });
-  console.log(userRenderCart, "12312312");
   let result = "";
   const renderCart = document.querySelector(".product");
   userRenderCart[0].carts.forEach((element, index) => {
@@ -145,6 +145,14 @@ function RenderCart() {
       <button onclick="deleteProductCart(${index})" class="icon_trash"><i class="ti-trash"></i></button>
     </li>
   </ul>
+  <hr />
+  <div class="sumTotal">
+    <span>Tổng tiền</span>
+    <span>Số tiền</span>
+  </div>
+  <div class="btn_pay-showcart">
+    <span><button class="showcart">xem giỏ hàng</button></span>
+    <span><button onclick="navitionPayment()" class="pay">thanh toán</button></span>
   
     `;
   });
