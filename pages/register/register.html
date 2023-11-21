@@ -53,16 +53,16 @@
             <li>
               <a href="#">sản phẩm</a>
             </li>
-            <li>
-              <a href="#">giới thiệu </a>
-            </li>
+            <!-- <li>
+              <a href="../cart/cart.html">giỏ hàng </a>
+            </li> -->
             <li><a href="#">blog</a></li>
             <li><a href="#">liên hệ</a></li>
           </ul>
         </div>
         <div class="header_user">
-          <div class="icon">
-            <a href="#"><i class="ti-user"></i></a>
+          <div class="icon" id="account-header">
+            <!-- <a href="#"><i class="ti-user"></i></a> -->
           </div>
           <div class="icon">
             <a href="#"><i class="ti-search"></i></a>
@@ -83,7 +83,8 @@
         <div class="form_login">
           <form onsubmit="handleRegister(event)">
             <input type="text" placeholder="Họ và tên" class="fullName" />
-            <div class="gender">
+            <div class="gender_parent">
+              <div class="gender">
               <label for="woman">Nữ</label>
               <input name="gender" type="radio" class="gender" />
             </div>
@@ -91,7 +92,7 @@
               <label for="male">Nam</label>
               <input name="gender" type="radio" class="gender" />
             </div>
-
+            </div>
             <input type="date" placeholder="dd/mm/yyyy" class="date" />
             <input type="email" placeholder="Email" class="email" />
             <input type="password" placeholder="Mật Khẩu" class="password" />
@@ -171,4 +172,5 @@
   ></script>
   <script src="../../components/scroll.js"></script>
   <script src="./register.js"></script>
+  <script src="../../utils/header.js"></script>
 </html>

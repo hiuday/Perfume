@@ -51,18 +51,18 @@
               <a href="#">nước hoa</a>
             </li>
             <li>
-              <a href="#">sản phẩm khác</a>
+              <a href="./pages/products/products.html">sản phẩm</a>
             </li>
             <li>
-              <a href="#">giới thiệu</a>
+              <!-- <a href="./pages/cart/cart.html">giỏ hàng</a> -->
             </li>
             <li><a href="#">blog</a></li>
             <li><a href="#">liên hệ</a></li>
           </ul>
         </div>
         <div class="header_user">
-          <div class="icon">
-            <a href="./pages/login/login.html"><i class="ti-user"></i></a>
+          <div class="icon" id="account-header">
+            <!-- <a href="./pages/login/login.html"><i class="ti-user"></i></a> -->
           </div>
           <div class="icon">
             <a href="#"><i class="ti-search"></i></a>
@@ -112,8 +112,8 @@
           <div class="btn_pay-showcart">
             <span><button class="showcart">xem giỏ hàng</button></span>
             <span><button class="pay">thanh toán</button></span>
-          </div>
-        </div> -->
+          </div>-->
+        </div>
       </div>
     </section>
     <!-- kết thúc modal cart -->
@@ -328,8 +328,8 @@
     <!-- kết thúc footer -->
   </body>
   <script src="./models/userDB.js"></script>
-  <script src="./models/orderDB.js"></script>
   <script src="./models/productDB..js"></script>
+  <script src="./models/paymentDB.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -348,6 +348,7 @@
   <script src="./models/modalCart.js"></script>
   <script src="./models/navitionDetail.js"></script>
   <script src="./pages/detail/detail.js"></script>
+  <script src="./utils/header.js"></script>
   <script>
     renderProduct("All");
   </script>

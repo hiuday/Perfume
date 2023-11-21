@@ -4,11 +4,13 @@ function formProduct() {
   const UserLogin = JSON.parse(localStorage.getItem("userLogin")) || [];
   const UserDB = JSON.parse(localStorage.getItem("users")) || [];
   let result = "";
+  let provisional = 0;
   const renderCart = document.querySelector("#form_product");
   UserDB.forEach((element, index) => {
     if (element.email === UserLogin.email) {
+      console.log(element.carts, "cart");
       element.carts.forEach((item) => {
-        result = `   
+        result += `   
         <div class="payment_product">
         <div class="title_product">
           <div class="img_product">
@@ -22,36 +24,42 @@ function formProduct() {
             <span>Giá tiền:${item.price}VNĐ</span>
           </div>
         </div>
-    
-        <div class="count_product">
-          <div class="count">
-            <span>Tạm tính</span>
-            <span>${item.price}VNĐ</span>
-          </div>
-          <div class="transport">
-            <span>Phí vận chuyển</span>
-            <span>0 Đồng</span>
-          </div>
-        </div>
-        <div class="total">
-          <span>Tổng cộng</span>
-          <span>${item.price * item.quantity}VNĐ</span>
-        </div>
       </div>
             `;
+        provisional = provisional + item.price * item.quantity;
       });
     }
   });
 
   //   UserLogin.carts.forEach((element, index) => {});
+  result =
+    result +
+    `
+  <div class="count_product">
+  <div class="count">
+    <span>Tạm tính</span>
+    <span>${provisional}VNĐ</span>
+  </div>
+  <div class="transport">
+    <span>Phí vận chuyển</span>
+    <span>0 Đồng</span>
+  </div>
+</div>
+<div class="total">
+  <span>Tổng cộng</span>
+  <span>${provisional}VNĐ</span>
+</div>
+  `;
   renderCart.innerHTML = result;
 }
 function payMent() {
   const User = JSON.parse(localStorage.getItem("userLogin"));
+  console.log(User, "userlogin");
   const inforUser = JSON.parse(localStorage.getItem("users"));
   const renderUser = document.querySelector(".form_user");
   inforUser.forEach((element) => {
     if (element.email === User.email) {
+      console.log(element, "111");
       renderUser.innerHTML = `
          
     <h5>Thông tin khách hàng</h5>
@@ -125,7 +133,7 @@ function addList(event) {
   };
 
   const payment = JSON.parse(localStorage.getItem("payment")) || [];
-
+  console.log(payment, "alo");
   payment.push(newData);
   localStorage.setItem("payment", JSON.stringify(payment));
   // đẩy dữ liệu newdata vào maindata
@@ -137,4 +145,5 @@ function addList(event) {
     }
   });
   localStorage.setItem("users", JSON.stringify(inforUser));
+  formProduct();
 }

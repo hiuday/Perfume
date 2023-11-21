@@ -23,6 +23,7 @@ function renderProduct(data) {
       </figcaption>
     </figure>
       `;
+      console.log(item.id,"idđ");
       }
     });
   } else {
@@ -45,6 +46,7 @@ function renderProduct(data) {
       </figcaption>
     </figure>
       `;
+      console.log(item.id,"âdd");
       }
     });
   }

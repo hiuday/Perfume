@@ -52,18 +52,18 @@
               <a href="#">nước hoa </a>
             </li>
             <li>
-              <a href="#">sản phẩm</a>
+              <a href="../products/products.html">sản phẩm</a>
             </li>
-            <li>
-              <a href="#">giới thiệu </a>
-            </li>
+            <!-- <li>
+              <a href="../cart/cart.html">giỏ hàng</a>
+            </li> -->
             <li><a href="#">blog</a></li>
             <li><a href="#">liên hệ</a></li>
           </ul>
         </div>
         <div class="header_user">
-          <div class="icon">
-            <a href="#"><i class="ti-user"></i></a>
+          <div class="icon" id="account-header">
+            <!-- <a href="#"><i class="ti-user"></i></a> -->
           </div>
           <div class="icon">
             <a href="#"><i class="ti-search"></i></a>
@@ -74,6 +74,52 @@
         </div>
       </div>
     </header>
+    <!-- modal cart -->
+    <section id="cart">
+      <h2>GIỎ HÀNG</h2>
+      <div class="cart_box">
+        <div class="cart_renderItem">
+          <span>Bạn có (item) sản phẩm trong giỏ hàng</span>
+          <span class="closeCart">X</span>
+        </div>
+        <div class="product">
+          <!-- <ul>
+            <li>
+              <a href="#"
+                ><img src="../../assets/img/another13.jpg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="trang chủ">
+                <p>tên sản phẩm</p>
+                <p>10ml</p></a
+              >
+            </li>
+            <li>
+              <button class="down">-</button>
+              <input class="show" type="text" disabled />
+              <button class="up">+</button>
+            </li>
+            <li>Đơn giá</li>
+            <li>
+              <p>Thành tiền:</p>
+              <p>Giá tiền</p>
+              <button class="icon_trash"><i class="ti-trash"></i></button>
+            </li>
+          </ul> -->
+          <!-- <hr />
+          <div class="sumTotal">
+            <span>Tổng tiền</span>
+            <span>Số tiền</span>
+          </div>
+          <div class="btn_pay-showcart">
+            <span><button class="showcart">xem giỏ hàng</button></span>
+            <span><button onclick="" class="pay">thanh toán</button></span>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- kết thúc modal cart -->
     <!-- kết thúc header -->
     <!-- phần main -->
     <main>
@@ -233,6 +279,9 @@
   <script src="../../components/scroll.js"></script>
   <script src="./product.js"></script>
   <script src="../../assets/active.js"></script>
+  <script src="../../utils/header.js"></script>
+  <script src="../../models/navitionDetail.js"></script>
+  <script src="../../models/modalCart.js"></script>
   <script>
     renderProduct("All");
   </script>

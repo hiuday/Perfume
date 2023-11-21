@@ -29,13 +29,10 @@ function renderDetail() {
               <button onclick="">100ml</button>
             </div>
             <div id="up_down_product">
-              <button onclick="" id="down">-</button>
               <input value="${item.quantity}" type="text" disabled/>
-              <button onclick="" id="up">+</button>
             </div>
             <div class="payment">
-              <button onclick="addToCart()" id="push_cart">thêm vào giỏ</button>
-              <button onclick="navitionPayment()" id="buy_now">mua ngay</button>
+              <button onclick="addToCart(${item.id})" id="push_cart">thêm vào giỏ</button>
             </div>
             <div id="review">
               <h1>mô tả</h1>
@@ -48,65 +45,104 @@ function renderDetail() {
     }
   });
 }
+// function buyNow(params) {
+//   const checkUserLogin = JSON.parse(localStorage.getItem("userLogin"));
+//   if (!checkUserLogin) {
+//     return alert("Vui lòng đăng nhập để thêm vào giỏ hàng");
+//   }
+//   addToCart(idProductDetail);
+//   navitionPayment(params);
+// }
 // add vào userlogin
-function addToCart() {
-  let addProduct = document.querySelector("#push_cart");
-  console.log(addProduct, "add cart");
-  const productsData = JSON.parse(localStorage.getItem("products")) || [];
+function addToCart(id) {
+  console.log(id, "aaa");
+  const checkUserLogin = JSON.parse(localStorage.getItem("userLogin"));
+  if (!checkUserLogin) {
+    alert("Vui lòng đăng nhập để thêm vào giỏ hàng");
+    window.location.href = "http://127.0.0.1:5501/pages/login/login.html";
+  }
+  const userLoginDB = JSON.parse(localStorage.getItem("userLogin"));
+  const userDB = JSON.parse(localStorage.getItem("users"));
+  const productDB = JSON.parse(localStorage.getItem("products"));
+  // const user = userDB.find((item) => item.id == userLoginDB.id);
+  const product = productDB.find((item) => item.id == id);
+  // const userCart = user.carts;
+  // userCart.push(product);
 
-  const itemProduct = productsData.filter((element) => {
-    return element.id == idProductDetail;
-  });
-  console.log(itemProduct);
+  let checkUser = userDB.findIndex((item) => item.id == userLoginDB.id);
+  if (checkUser != -1) {
+    const cart = userDB[checkUser].carts;
+    let checkProduct = cart.findIndex((item) => item.id == id);
+    if (checkProduct != -1) {
+      let result = cart.map((item, index) => {
+        if (index == checkProduct) {
+          return {
+            ...item,
+            quantity: item.quantity + 1,
+          };
+        } else {
+          return item;
+        }
+      });
+      console.log(result);
+      userDB[checkUser].carts = result;
+      localStorage.setItem("users", JSON.stringify(userDB));
+    } else {
+      userDB[checkUser].carts.push({
+        ...product,
+        quantity: 1,
+      });
+    }
+    localStorage.setItem("users", JSON.stringify(userDB));
+  }
+  // let userCart = JSON.parse(localStorage.getItem("users")) || [];
+  // // let userLogin = JSON.parse(localStorage.getItem("userLogin")) || [];
+  // const productsData = JSON.parse(localStorage.getItem("products")) || [];
 
-  let userCart = JSON.parse(localStorage.getItem("users")) || [];
-  let userLogin = JSON.parse(localStorage.getItem("userLogin")) || [];
+  // const itemProduct = productsData.find((element) => {
+  //   return element.id == id;
+  // });
 
-  const indexUserCart = userCart.findIndex((element) => {
-    return element.email == userLogin.email;
-  });
+  // const indexUserCart = userCart.findIndex((element) => {
+  //   return element.email == userLogin.email;
+  // });
+  // const checkCart = userCart[indexUserCart].carts.find((item) => item.id == id);
 
   //  add to cart tại vị trí indexUserCart
   // nếu chưa có sản phẩm nào trong giỏ hàng thì thêm mới
   // nếu có rồi mà trùng id thì tăng số lượng quantity, không trùng thì thêm mới
   // đẩy vào localstorage
 
-  if (indexUserCart == -1) {
-    console.log("chưa có sản phẩm");
-    userCart.push({
-      email: userLogin.email,
-      carts: [
-        {
-          id: itemProduct[0].id,
-          img: itemProduct[0].img,
-          productName: itemProduct[0].productName,
-          price: itemProduct[0].price,
-          quantity: 1,
-        },
-      ],
-    });
-  } else {
-    const indexProduct = userCart[indexUserCart].carts.findIndex(
-      (element) => element.id == idProductDetail
-    );
-    if (indexProduct == -1) {
-      console.log("có sản phẩm ko trùng id");
-      userCart[indexUserCart].carts.push({
-        id: itemProduct[0].id,
-        img: itemProduct[0].img,
-        productName: itemProduct[0].productName,
-        price: itemProduct[0].price,
-        quantity: 1,
-      });
-    } else {
-      console.log("sản phẩm trùng id");
-      userCart[indexUserCart].carts[indexProduct].quantity++;
-    }
-  }
+  //  if (checkCart == -1) {
+
+  //     userCart[indexUserCart].carts.push(itemProduct);
+  //     localStorage.setItem("users", JSON.stringify(userCart));
+  //   } else {
+  //     const indexProduct = userCart[indexUserCart].carts.findIndex(
+  //       (element) => element.id == idProductDetail
+  //     );
+  //     if (indexProduct == -1) {
+  //       console.log("có sản phẩm ko trùng id");
+  //       userCart[indexUserCart].carts.push({
+  //         id: itemProduct[0].id,
+  //         img: itemProduct[0].img,
+  //         productName: itemProduct[0].productName,
+  //         price: itemProduct[0].price,
+  //         quantity: 1,
+  //       });
+  //     } else {
+  //       console.log("sản phẩm trùng id");
+  //       userCart[indexUserCart].carts[indexProduct].quantity++;
+  //     }
+  //   }
 
   // userCart.splice(indexUserCart, 1, itemProduct[0]);
-  console.log(userCart, "gửi đúng");
-  localStorage.setItem("users", JSON.stringify(userCart));
+
+  //tìm vị trí của obj sau đó thay thế thành obj mới và lưu lại vào bộ nhớ
+  // của anh bình
+  // const indexUser = userDB.findIndex((item) => item.id == userLoginDB.id);
+  // userDB[indexUser] = user;
+  // localStorage.setItem("users", JSON.stringify(userDB));
   RenderCart();
 }
 
@@ -120,8 +156,9 @@ function RenderCart() {
   let result = "";
   const renderCart = document.querySelector(".product");
   userRenderCart[0].carts.forEach((element, index) => {
+    console.log(element, "element");
     result += `   
-    <ul>
+    <ul style="margin-top:40px">
     <li> 
       <a href="#"
         ><img src="../${element.img}" alt=""
@@ -134,30 +171,31 @@ function RenderCart() {
       >
     </li>
     <li>
-      <button onclick="" class="down">-</button>
+    <p>Số lượng:</p>
     <input value="${element.quantity}" class="show" type="text" disabled />
-      <button onclick="" class="up">+</button>
     </li>
-    <li>${element.price}</li>
+    <li>
+      <p>Đơn giá:</p>
+      <p>${element.price.toLocaleString() + "VND"}</p>
+    </li>
     <li>
       <p>Thành tiền</p>
-      <p>${element.price * element.quantity}</p>
+      <p>${(element.price * element.quantity).toLocaleString() + "VND"}</p>
+      </li>
       <button onclick="deleteProductCart(${index})" class="icon_trash"><i class="ti-trash"></i></button>
-    </li>
   </ul>
   <hr />
-  <div class="sumTotal">
-    <span>Tổng tiền</span>
-    <span>Số tiền</span>
-  </div>
   <div class="btn_pay-showcart">
-    <span><button class="showcart">xem giỏ hàng</button></span>
-    <span><button onclick="navitionPayment()" class="pay">thanh toán</button></span>
-  
+    <span><button onclick="navitionPayment(${
+      element.id
+    })" class="pay">thanh toán</button></span>
+  </div>
     `;
   });
+
   renderCart.innerHTML = result;
 }
+RenderCart();
 //hàm xoá sản phẩm trong cart
 function deleteProductCart(index) {
   const userCart = JSON.parse(localStorage.getItem("users")) || [];

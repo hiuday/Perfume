@@ -33,4 +33,8 @@
 .gender{
     display: flex;
     align-items: center;
+    width: 10%;
+}
+.gender_parent{
+    display: flex;
 }

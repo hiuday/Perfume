@@ -13,7 +13,7 @@ function handleLogin(event) {
     if (userLogin.status == 1) {
       console.log("123");
       alert("đăng nhập ok");
-      window.location.href = "../history/history.html";
+      window.location.href = "../../index.html";
       localStorage.setItem("userLogin", JSON.stringify(userLogin));
     } else {
       alert("tài khoản đã bị khoá");
@@ -22,5 +22,3 @@ function handleLogin(event) {
     alert("tài khoản hoặc mật khẩu không đúng");
   }
 }
-
-

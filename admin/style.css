@@ -31,9 +31,9 @@ ul,ol {
 }
 .sidebar{
     position: fixed;
-    top: 10;
+    top: 0;
     left: 0;
-    bottom: 1;
+    bottom: 0;
     width: 300px;
     background-color: #ddd;
 }
@@ -206,4 +206,50 @@ color: white;
  }
  .container{
     background-color: beige;
+ }
+
+ /* phần modal */
+ #modal{
+    border: 1px solid black;
+    margin: 0 500px;
+    top: -100%;
+    position: fixed;
+ }
+ #modal-add{
+    border: 1px solid black;
+    margin: 0 500px;
+    top: 100%;
+    position: fixed;
+ }
+ .modal_content{
+    background-color: rgb(232, 227, 227);
+    padding: 10px;
+
+ }
+ #modal h2{
+    text-align: center;
+ }
+ .modal_content ul li{
+    padding: 10px 0;
+ }
+
+ .modal_content input{
+    padding: 5px;
+    border-radius: 10px;
+
+ }
+ .modal_content button{
+    padding: 4px 10px;
+    border: none;
+    
+ }
+ .saved{
+    background-color: greenyellow;
+    color: white;
+    font-weight: 600;
+ }
+ .cancel{
+    background-color: red;
+    color: white;
+    font-weight: 600;
  }
